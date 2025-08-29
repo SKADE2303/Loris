@@ -4,6 +4,7 @@ import Loader from 'Loader';
 import Panel from 'Panel';
 import {QueryChartForm} from './helpers/queryChartForm';
 import {progressBarBuilder} from './helpers/progressbarBuilder';
+import {useTranslation} from 'react-i18next';
 
 import {setupCharts} from './helpers/chartBuilder';
 
@@ -16,6 +17,7 @@ import {setupCharts} from './helpers/chartBuilder';
 const Recruitment = (props) => {
   const [loading, setLoading] = useState(true);
   const [showFiltersBreakdown, setShowFiltersBreakdown] = useState(false);
+  const {t} = useTranslation(['statistics', 'loris']);
 
   let json = props.data;
 
@@ -87,21 +89,21 @@ const Recruitment = (props) => {
     [props.data]
   );
 
-  return loading ? <Panel title ='Recruitment'><Loader/></Panel> : (
+  return loading ? <Panel title={t('Recruitment', {ns: 'statistics'})}><Loader/></Panel> : (
     <>
       <Panel
-        title ='Recruitment'
-        id ='statistics_recruitment'
-        onChangeView ={(index) => {
+        title={t('Recruitment', {ns: 'statistics'})}
+        id='statistics_recruitment'
+        onChangeView={(index) => {
           setupCharts(false, chartDetails);
         }}
-        views ={[
+        views={[
           {
             content:
-            <div className ='recruitment-panel' id='overall-recruitment'>
+            <div className='recruitment-panel' id='overall-recruitment'>
               {progressBarBuilder(json['recruitment']['overall'])}
             </div>,
-            title: 'Recruitment - overall',
+            title: t('Recruitment - overall', {ns: 'statistics'}),
           },
           {
             content:
@@ -114,7 +116,7 @@ const Recruitment = (props) => {
                         className="btn btn-default btn-xs"
                         onClick={() => setShowFiltersBreakdown((prev) => !prev)}
                       >
-                        {showFiltersBreakdown ? 'Hide Filters' : 'Show Filters'}
+                        {showFiltersBreakdown ? t('Hide Filters', {ns: 'statistics'}) : t('Show Filters', {ns: 'statistics'})}
                       </button>
                     </div>
                     {showFiltersBreakdown && (
@@ -145,9 +147,9 @@ const Recruitment = (props) => {
                     </div>
                   </>
                 ) : (
-                  <p>There have been no candidates registered yet.</p>
+                  <p>{t('There have been no candidates registered yet.', {ns: 'statistics'})}</p>
                 ),
-            title: 'Recruitment - site breakdown',
+            title: t('Recruitment - site breakdown', {ns: 'statistics'}),
             onToggleFilters: () => {
               setShowFiltersBreakdown((prev) => !prev);
             },
@@ -171,7 +173,7 @@ const Recruitment = (props) => {
                   }
                 )}
               </div>,
-            title: 'Recruitment - project breakdown',
+            title: t('Recruitment - project breakdown', {ns: 'statistics'}),
           },
           {
             content:
@@ -185,13 +187,13 @@ const Recruitment = (props) => {
                 {Object.entries(json['recruitmentcohorts'])
                   .map(
                     ([key, value]) => {
-                      return <div key ={`cohortBreakdown_${key}`}>
+                      return <div key={`cohortBreakdown_${key}`}>
                         {progressBarBuilder(value)}
                       </div>;
                     }
                   )}
               </div>,
-            title: 'Recruitment - cohort breakdown',
+            title: t('Recruitment - cohort breakdown', {ns: 'statistics'}),
           },
         ]}
       />

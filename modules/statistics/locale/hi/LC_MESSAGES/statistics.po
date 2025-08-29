@@ -1,0 +1,311 @@
+# Default LORIS strings to be translated (English).
+# Copy this to a language specific file and add translations to the
+# new file.
+# Copyright (C) 2025
+# This file is distributed under the same license as the LORIS package.
+# Dave MacFarlane <dave.macfarlane@mcin.ca>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LORIS 27\n"
+"Report-Msgid-Bugs-To: https://github.com/aces/Loris/issues\n"
+"POT-Creation-Date: 2025-04-08 14:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Statistics"
+msgstr "सांख्यिकी"
+
+msgid "Study Progression"
+msgstr "अध्ययन प्रगति"
+
+msgid "Summary"
+msgstr "सारांश"
+
+msgid "Site Scans"
+msgstr "साइट स्कैन"
+
+msgid "Site Recruitment"
+msgstr "साइट भर्ती"
+
+msgid "-- Clear Selection --"
+msgstr "-- चयन साफ़ करें --"
+
+msgid "Download data as csv"
+msgstr "डेटा CSV के रूप में डाउनलोड करें"
+
+msgid "Download as image(png)"
+msgstr "इमेज (PNG) के रूप में डाउनलोड करें"
+
+msgid "Scan sessions per site"
+msgstr "साइट प्रति स्कैन सत्र"
+
+msgid "Recruitment per site"
+msgstr "साइट अनुसार भर्ती"
+
+msgid "Download as PNG"
+msgstr "PNG के रूप में डाउनलोड करें"
+
+msgid "Hide Filters"
+msgstr "फ़िल्टर छिपाएँ"
+
+msgid "Show Filters"
+msgstr "फ़िल्टर दिखाएँ"
+
+msgid "There have been no scans yet."
+msgstr "अभी तक कोई स्कैन नहीं हुआ है।"
+
+msgid "Study Progression - site scans"
+msgstr "अध्ययन प्रगति - साइट स्कैन"
+
+msgid "Study Progression - site recruitment"
+msgstr "अध्ययन प्रगति - साइट भर्ती"
+
+msgid "There have been no candidates registered yet."
+msgstr "अभी तक कोई उम्मीदवार पंजीकृत नहीं है।"
+
+msgid "Recruitment"
+msgstr "भर्ती"
+
+msgid "Recruitment - overall"
+msgstr "भर्ती - कुल"
+
+msgid "Recruitment - site breakdown"
+msgstr "भर्ती - साइट विवरण"
+
+msgid "Recruitment - project breakdown"
+msgstr "भर्ती - परियोजना विवरण"
+
+msgid "Recruitment - cohort breakdown"
+msgstr "भर्ती - समूह विवरण"
+
+msgid "Total recruitment by Age"
+msgstr "आयु के अनुसार कुल भर्ती"
+
+msgid "Ethnicity at Screening"
+msgstr "स्क्रीनिंग में जातीयता"
+
+msgid "Total Recruitment per Site"
+msgstr "साइट प्रति कुल भर्ती"
+
+msgid "Biological sex breakdown by site"
+msgstr "साइट अनुसार जैविक लिंग विवरण"
+
+msgid "Age (Years)"
+msgstr "आयु (साल)"
+
+msgid "Ethnicity"
+msgstr "जातीयता"
+
+msgid "Participants"
+msgstr "प्रतिभागी"
+
+msgid "Females"
+msgstr "महिला"
+
+msgid "Males"
+msgstr "पुरुष"
+
+msgid "Other"
+msgstr "अन्य"
+
+msgid "Target"
+msgstr "लक्ष्य"
+
+msgid "Recruitment target of %s was reached."
+msgstr "भर्ती का लक्ष्य %s पूरा हुआ।"
+
+msgid "total participants."
+msgstr "कुल प्रतिभागी।"
+
+msgid "Recruitment target of %s not reached."
+msgstr "भर्ती का लक्ष्य %s पूरा नहीं हुआ।"
+
+msgid "Clear Filters"
+msgstr "फ़िल्टर साफ़ करें"
+
+msgid "Candidates registered"
+msgstr "पंजीकृत उम्मीदवार"
+
+msgid "Labels"
+msgstr "लेबल"
+
+msgid "Double Data Entry Completion Statistics"
+msgstr "दोहरी डेटा प्रविष्टि पूर्णता सांख्यिकी"
+
+msgid "Instrument"
+msgstr "उपकरण"
+
+msgid "Completion Count"
+msgstr "पूर्णता गणना"
+
+msgid "Incomplete Candidates"
+msgstr "अधूरी उम्मीदवार"
+
+msgid "Completion Statistics"
+msgstr "पूर्णता सांख्यिकी"
+
+msgid "MRI Integrity Statistics"
+msgstr "एमआरआई सत्यता सांख्यिकी"
+
+msgid "Issue type"
+msgstr "समस्या प्रकार"
+
+msgid "Incomplete Entries"
+msgstr "अधूरी प्रविष्टियाँ"
+
+msgid "Show Visit Labels"
+msgstr "विज़िट लेबल दिखाएँ"
+
+msgid "Total Across Cohorts"
+msgstr "समूहों के बीच कुल"
+
+msgid "Categories"
+msgstr "श्रेणियाँ"
+
+msgid "Site Total Across All Visits"
+msgstr "सभी विज़िट में साइट कुल"
+
+msgid "Grand Total"
+msgstr "महान कुल"
+
+msgid "It seems like the scan type selected does not have a corresponding column in the mri_parameter_form table in the database."
+msgstr "ऐसा लगता है कि चयनित स्कैन प्रकार के लिए डेटाबेस में 'mri_parameter_form' तालिका में कोई संबंधित कॉलम नहीं है।"
+
+msgid "In order to display the statistics for the scan type, make sure the mri_parameter_form table contains a column in the exact format SCANTYPE_Scan_done"
+msgstr "स्कैन प्रकार की सांख्यिकी दिखाने के लिए सुनिश्चित करें कि 'mri_parameter_form' तालिका में सही प्रारूप SCANTYPE_Scan_done में कॉलम मौजूद हो।"
+
+msgid "General Description"
+msgstr "सामान्य विवरण"
+
+msgid "Welcome to the statistics page"
+msgstr "सांख्यिकी पृष्ठ पर आपका स्वागत है"
+
+msgid "This page will display statistics related to data acquisition, data processing and data entry as it relates to both the behavioural and imaging aspects of this study."
+msgstr "यह पृष्ठ डेटा संग्रह, डेटा प्रोसेसिंग और डेटा प्रविष्टि से संबंधित सांख्यिकी दिखाएगा, जो इस अध्ययन के व्यवहारिक और इमेजिंग पहलुओं से संबंधित हैं।"
+
+msgid "Demographics Statistics"
+msgstr "जनसांख्यिकी सांख्यिकी"
+
+msgid "The <b>Demographics Statistics</b> tab currently includes general statistics relating to the number of candidates registered in each cohort as well as customizable categories displaying statistics relating to candidate demographics (participant status, sex, age etc.). You may also view statistics broken down per instrument, displaying the number of complete and incomplete instruments per site, as it pertains to each visit label and cohort by selecting an instrument from the dropdown menu with the option to hide visit labels to only display total visit counts per site."
+msgstr "<b>जनसांख्यिकी सांख्यिकी</b> टैब वर्तमान में प्रत्येक समूह में पंजीकृत उम्मीदवारों की संख्या से संबंधित सामान्य सांख्यिकी और उम्मीदवार जनसांख्यिकी (प्रतिभागी स्थिति, लिंग, आयु आदि) से संबंधित अनुकूलन योग्य श्रेणियाँ दिखाता है। आप प्रत्येक विज़िट लेबल और समूह के अनुसार साइट प्रति पूर्ण और अधूरी उपकरणों की संख्या दिखाने वाले उपकरण के अनुसार सांख्यिकी भी देख सकते हैं।"
+
+msgid "Behavioural Statistics"
+msgstr "व्यवहारिक सांख्यिकी"
+
+msgid "The <b>Behavioural Statistics</b> tab currently includes data entry statistics relating to the number of candidates who have completed each instrument per site and timepoint. As well, there is an option to view the data entry statistics per instrument as well a breakdown per participant, which will reveal an in-depth table, listing candidate PSCIDs, completion count, and incomplete candidates. The same statistics are also available for double data entry."
+msgstr "<b>व्यवहारिक सांख्यिकी</b> टैब वर्तमान में प्रत्येक साइट और समय बिंदु पर प्रत्येक उपकरण पूरा करने वाले उम्मीदवारों से संबंधित डेटा प्रविष्टि सांख्यिकी दिखाता है। प्रत्येक प्रतिभागी के अनुसार विस्तृत तालिका भी देखी जा सकती है, जिसमें उम्मीदवारों के PSCID, पूर्णता गणना और अधूरी प्रविष्टियाँ शामिल हैं। यही सांख्यिकी दोहरी डेटा प्रविष्टि के लिए भी उपलब्ध है।"
+
+msgid "MRI Statistics"
+msgstr "एमआरआई सांख्यिकी"
+
+msgid "The <b>MRI statistics</b> tab currently displays the number of scans inserted per site as well as their QC (Quality Control) status. For various scans within a study based on the MRI parameter form entries, there is a breakdown of scan completion, arranged by site, cohort and timepoint, with the option to hide visit labels to only display total visit counts per site."
+msgstr "<b>एमआरआई सांख्यिकी</b> टैब वर्तमान में प्रत्येक साइट में डाली गई स्कैन संख्या और उनका QC (क्वालिटी कंट्रोल) स्थिति दिखाता है। अध्ययन के विभिन्न स्कैन के लिए, MRI parameter form प्रविष्टियों के आधार पर, साइट, समूह और समय बिंदु द्वारा स्कैन पूर्णता का विवरण दिखाया जाता है, जिसमें केवल साइट पर कुल विज़िट गिनती दिखाने के लिए विज़िट लेबल छिपाने का विकल्प है।"
+
+msgid "General Demographic Statistics"
+msgstr "सामान्य जनसांख्यिकी सांख्यिकी"
+
+msgid "Submit Query"
+msgstr "क्वेरी सबमिट करें"
+
+msgid "Demographics"
+msgstr "जनसांख्यिकी"
+
+msgid "No defined cohort"
+msgstr "कोई परिभाषित समूह नहीं"
+
+msgid "Total"
+msgstr "कुल"
+
+msgid "Registered candidates"
+msgstr "पंजीकृत उम्मीदवार"
+
+msgid "Participant Status"
+msgstr "प्रतिभागी स्थिति"
+
+msgid "Active"
+msgstr "सक्रिय"
+
+msgid "Inactive"
+msgstr "निष्क्रिय"
+
+msgid "Sex"
+msgstr "लिंग"
+
+msgid "Male"
+msgstr "पुरुष"
+
+msgid "Female"
+msgstr "महिला"
+
+msgid "Age Average (months)"
+msgstr "आयु औसत (महीने)"
+
+msgid "Data Entry Statistics"
+msgstr "डेटा प्रविष्टि सांख्यिकी"
+
+msgid "Click to minimize"
+msgstr "संक्षिप्त करने के लिए क्लिक करें"
+
+msgid "Visit"
+msgstr "विज़िट"
+
+msgid "Completed (%)"
+msgstr "पूर्ण (%)"
+
+msgid "Created"
+msgstr "निर्मित"
+
+msgid "Per Instrument Stats"
+msgstr "प्रति उपकरण सांख्यिकी"
+
+msgid "View Details"
+msgstr "विवरण देखें"
+
+msgid "Click here for breakdown per participant"
+msgstr "प्रत्येक प्रतिभागी के अनुसार विवरण देखने के लिए क्लिक करें"
+
+msgid "Double Data Entry Statistics:"
+msgstr "दोहरी डेटा प्रविष्टि सांख्यिकी:"
+
+msgid "Completed"
+msgstr "पूर्ण"
+
+msgid "General Statistics with QC Status"
+msgstr "QC स्थिति के साथ सामान्य सांख्यिकी"
+
+msgid "Select All"
+msgstr "सभी चुनें"
+
+msgid "Scan Type"
+msgstr "स्कैन प्रकार"
+
+msgid "QC Status"
+msgstr "QC स्थिति"
+
+msgid "Scans Inserted"
+msgstr "स्कैन डाले गए"
+
+msgid "Passed"
+msgstr "पास"
+
+msgid "Failed"
+msgstr "असफल"
+
+msgid "Not QCed"
+msgstr "QC नहीं हुआ"
+
+msgid "Oops"
+msgstr "उफ़्स"
+
+msgid "It seems like the 'mri_parameter_form' table is missing in the database currently in use."
+msgstr "ऐसा लगता है कि वर्तमान डेटाबेस में 'mri_parameter_form' तालिका मौजूद नहीं है।"
+
+msgid "This table is necessary in order to compute the Breakdown table of the MRI statistics page."
+msgstr "MRI सांख्यिकी पृष्ठ के विवरण तालिका की गणना के लिए यह तालिका आवश्यक है।"
+

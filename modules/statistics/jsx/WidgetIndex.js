@@ -12,8 +12,7 @@ import {useTranslation} from 'react-i18next';
 import '../css/WidgetIndex.css';
 
 import {setupCharts} from './widgets/helpers/chartBuilder';
-import jaStrings from '../locale/ja/LC_MESSAGES/statistics.json';
-
+import hiStrings from '../locale/hi/LC_MESSAGES/statistics.json';
 /**
  * WidgetIndex - the main window.
  *
@@ -24,10 +23,7 @@ const WidgetIndex = (props) => {
   const [recruitmentData, setRecruitmentData] = useState({});
   const [studyProgressionData, setStudyProgressionData] = useState({});
   const [modalChart, setModalChart] = useState(null);
-  const {t, i18n} = useTranslation();
-  useEffect( () => {
-    i18n.addResourceBundle('ja', 'statistics', jaStrings);
-  }, []);
+  const {t} = useTranslation(['statistics', 'loris']);
 
   // used by recruitment.js and studyprogression.js to display each chart.
   const showChart = (section, chartID, chartDetails, setChartDetails) => {
@@ -38,7 +34,7 @@ const WidgetIndex = (props) => {
       >
         {/* Chart Title and Dropdown */}
         <div className ='chart-header'>
-          <h5 className ='chart-title'>{title}</h5>
+          <h5 className ='chart-title'>{t(title, {ns: 'statistics'})}</h5>
           {Object.keys(chartDetails[section][chartID].options).length > 1 && (
             <div className ="chart-dropdown-wrapper">
               <SelectElement
@@ -103,7 +99,7 @@ const WidgetIndex = (props) => {
     const convertBarToCSV = (data) => {
       const csvRows = [];
       // Adding headers row
-      const headers = [labelsLabel, ...Object.keys(data.datasets)];
+      const headers = [t('Labels', {ns: 'statistics'}), ...Object.keys(data.datasets)];
       csvRows.push(headers.join(','));
       // Adding data rows
       const maxDatasetLength = Math.max(
@@ -243,7 +239,7 @@ const WidgetIndex = (props) => {
         show ={modalChart}
         onClose ={() => setModalChart(null)}
         width ={'1200px'}
-        title ={modalChart && modalChart.title}
+        title ={modalChart && t(modalChart.title, {ns: 'statistics'})}
         throwWarning ={false}
       >
         <div
@@ -330,6 +326,7 @@ WidgetIndex.propTypes = {
 window.addEventListener(
   'load',
   () => {
+    i18n.addResourceBundle('hi', 'statistics', hiStrings);
     createRoot(
       document.getElementById('statistics_widgets')
     ).render(

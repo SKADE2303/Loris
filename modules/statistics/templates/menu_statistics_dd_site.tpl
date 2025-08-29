@@ -1,9 +1,9 @@
-<h2 class="statsH2">{$SiteName} Double Data Entry Completion Statistics {$CurrentProject.Name}</h2>
+<h2 class="statsH2">{$SiteName} {dgettext("statistics", "Double Data Entry Completion Statistics")} {$CurrentProject.Name}</h2>
 <table class="fancytable dynamictable" width="100%">
    <tr>
-      <th>Instrument</th>
-      <th>Completion Count</th>
-      <th colspan="{$NumVisitLabels}" width="80%">Incomplete Candidates</th>
+      <th>{dgettext("statistics", "Instrument")}</th>
+      <th>{dgettext("statistics", "Completion Count")}</th>
+      <th colspan="{$NumVisitLabels}" width="80%">{dgettext("statistics", "Incomplete Candidates")}</th>
    </tr>
    <tr>
       <th>&nbsp;</th>

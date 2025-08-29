@@ -1,9 +1,9 @@
-<h2>{$SiteName} Completion Statistics</h2>
+<h2>{$SiteName} {dgettext("statistics", "Completion Statistics")}</h2>
 <table class="fancytable dynamictable" width="100%">
    <tr>
-      <th>Instrument</th>
-      <th>Completion Count</th>
-      <th colspan="{$NumVisitLabels}" width="80%">Incomplete Candidates</th>
+      <th>{dgettext("statistics", "Instrument")}</th>
+      <th>{dgettext("statistics", "Completion Count")}</th>
+      <th colspan="{$NumVisitLabels}" width="80%">{dgettext("statistics", "Incomplete Candidates")}</th>
    </tr>
    <tr>
       <th>&nbsp;</th>

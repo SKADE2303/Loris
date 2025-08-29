@@ -127,6 +127,8 @@ locales:
 	msgfmt -o modules/server_processes_manager/locale/ja/LC_MESSAGES/server_processes_manager.mo modules/server_processes_manager/locale/ja/LC_MESSAGES/server_processes_manager.po
 	msgfmt -o modules/statistics/locale/ja/LC_MESSAGES/statistics.mo modules/statistics/locale/ja/LC_MESSAGES/statistics.po
 	npx i18next-conv -l ja -s modules/statistics/locale/ja/LC_MESSAGES/statistics.po -t modules/statistics/locale/ja/LC_MESSAGES/statistics.json
+	msgfmt -o modules/statistics/locale/hi/LC_MESSAGES/statistics.mo modules/statistics/locale/hi/LC_MESSAGES/statistics.po
+	npx i18next-conv -l hi -s modules/statistics/locale/hi/LC_MESSAGES/statistics.po -t modules/statistics/locale/hi/LC_MESSAGES/statistics.json
 	msgfmt -o modules/survey_accounts/locale/ja/LC_MESSAGES/survey_accounts.mo modules/survey_accounts/locale/ja/LC_MESSAGES/survey_accounts.po
 	msgfmt -o modules/timepoint_list/locale/ja/LC_MESSAGES/timepoint_list.mo modules/timepoint_list/locale/ja/LC_MESSAGES/timepoint_list.po
 	msgfmt -o modules/timepoint_list/locale/es/LC_MESSAGES/timepoint_list.mo modules/timepoint_list/locale/es/LC_MESSAGES/timepoint_list.po

@@ -7,6 +7,7 @@ import {QueryChartForm} from './helpers/queryChartForm';
 import {setupCharts} from './helpers/chartBuilder';
 import {useTranslation} from 'react-i18next';
 import jaStrings from '../../locale/ja/LC_MESSAGES/statistics.json';
+import hiStrings from '../../locale/hi/LC_MESSAGES/statistics.json';
 
 /**
  * StudyProgression - a widget containing statistics for study data.
@@ -22,7 +23,7 @@ const StudyProgression = (props) => {
   const [activeView, setActiveView] = useState(0);
   useEffect( () => {
     i18n.addResourceBundle('ja', 'statistics', jaStrings);
-
+    i18n.addResourceBundle('hi', 'statistics', hiStrings);
     // Re-set default state that depended on the translation
     let newdetails = {...chartDetails};
     newdetails['total_scans']['scans_bymonth']['title']
@@ -176,7 +177,7 @@ const StudyProgression = (props) => {
                 {showChart('total_scans', 'scans_bymonth')}
               </div>
             ) : (
-              <p>There have been no scans yet.</p>
+              <p>{t('There have been no scans yet.', {ns: 'statistics'})}</p>
             ),
             title: title('Site Scans'),
             onToggleFilters: () => setShowFiltersScans((prev) => !prev),
@@ -215,7 +216,7 @@ const StudyProgression = (props) => {
                   {showChart('total_recruitment', 'siterecruitment_line')}
                 </div>
               ) : (
-                <p>There have been no candidates registered yet.</p>
+                <p>{t('There have been no candidates registered yet.', {ns: 'statistics'})}</p>
               ),
             title: title('Site Recruitment'),
             onToggleFilters: () => setShowFiltersRecruitment((prev) => !prev),

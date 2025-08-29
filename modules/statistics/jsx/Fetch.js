@@ -8,6 +8,8 @@
  * @param {string} url for the request
  * @return {object} json retrieved from the server.
  */
+import {useTranslation} from 'react-i18next';
+
 const fetchData = async (url) => {
   let response;
   try {
@@ -26,7 +28,7 @@ const fetchData = async (url) => {
     }
   } catch (e) {
     let errorMessage;
-    if (response.status) {
+    if (response && response.status) {
       // Error from the response.
       errorMessage = `An error occurred: ${response.status}`;
     } else {

@@ -2,6 +2,7 @@
 import 'c3/c3.min.css';
 import c3 from 'c3';
 import {fetchData} from '../../Fetch';
+import {useTranslation} from 'react-i18next';
 
 const baseURL = window.location.origin;
 
@@ -90,13 +91,14 @@ const formatPieData = (data) => {
  * @return {[]}
  */
 const formatBarData = (data) => {
+  const {t} = useTranslation(['statistics', 'loris']);
   const processedData = [];
   if (data['datasets']) {
-    const females = ['Female'];
+    const females = [t('Females', {ns: 'statistics'})];
     processedData.push(females.concat(data['datasets']['female']));
   }
   if (data['datasets']) {
-    const males = ['Male'];
+    const males = [t('Males', {ns: 'statistics'})];
     processedData.push(males.concat(data['datasets']['male']));
   }
   return processedData;
@@ -129,6 +131,7 @@ const createPieChart = (columns, id, targetModal, colours) => {
 }
 
 const createBarChart = (labels, columns, id, targetModal, colours, dataType) => {
+  const {t} = useTranslation(['statistics', 'loris']);
   let newChart = c3.generate({
     bindto: targetModal ? targetModal : id,
     data: {
@@ -156,7 +159,7 @@ const createBarChart = (labels, columns, id, targetModal, colours, dataType) => 
       },
       y: {
         label: {
-          text: 'Candidates registered',
+          text: t('Candidates registered', {ns: 'statistics'}),
           position: 'inner-top'
         },
       },
