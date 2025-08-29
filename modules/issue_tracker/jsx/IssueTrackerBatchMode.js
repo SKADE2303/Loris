@@ -14,7 +14,7 @@ import {withTranslation} from 'react-i18next';
  * @param {object} props - The component props
  * @param {object} props.options - The options for the IssueTrackerBatchMode
  */
-function IssueTrackerBatchMode({options}) {
+function IssueTrackerBatchMode(props) {
   const [issues, setIssues] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedPriorities, setSelectedPriorities] = useState([]);
@@ -33,10 +33,10 @@ function IssueTrackerBatchMode({options}) {
     rows: 10,
   });
 
-  const priorities = options.priorities || {};
-  const statuses = options.statuses || {};
-  const categories = options.categories || {};
-  const sites = options.sites || {};
+  const priorities = props.options.priorities || {};
+  const statuses = props.options.statuses || {};
+  const categories = props.options.categories || {};
+  const sites = props.options.sites || {};
 
   useEffect(() => {
     fetchIssues();

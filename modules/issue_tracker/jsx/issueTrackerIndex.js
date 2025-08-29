@@ -270,21 +270,21 @@ class IssueTrackerIndex extends Component {
       }},
     ];
 
-    const filterPresets = [
-      {label: t('All Issues', {ns: 'issue_tracker'}), filter: {}},
-      {label: t('Active Issues', {ns: 'issue_tracker'}), filter: {
+    const filterPresets = {
+      all: {label: t('All Issues', {ns: 'issue_tracker'}), filter: {}},
+      active: {label: t('Active Issues', {ns: 'issue_tracker'}), filter: {
         status: {
           value: ['acknowledged', 'assigned', 'feedback', 'new', 'resolved'],
         },
       }},
-      {label: t('Closed Issues', {ns: 'issue_tracker'}), filter: {
+      closed: {label: t('Closed Issues', {ns: 'issue_tracker'}), filter: {
         status: {value: ['closed'], exactMatch: true},
       }},
-    ];
+    };
 
     // Add "My Issues" filter only if user has any issues
     if (this.state.data.userIssueCount > 0) {
-      filterPresets.push({
+      filterPresets.myIssues = {
         label: t('My Issues', {ns: 'issue_tracker'}),
         filter: {
           assignee: {
@@ -294,7 +294,7 @@ class IssueTrackerIndex extends Component {
             value: ['acknowledged', 'assigned', 'feedback', 'new', 'resolved'],
           },
         },
-      });
+      };
     }
 
     const addIssue = () => {
@@ -337,6 +337,11 @@ class IssueTrackerIndex extends Component {
             actions={actions}
             getFormattedCell={this.formatColumn}
           />
+          <ul>
+            {Object.values(filterPresets).map((preset, idx) => (
+              <li key={preset.label || idx}>{preset.label}</li>
+            ))}
+          </ul>
         </TabPane>
         <TabPane TabId="batch">
           <IssueTrackerBatchMode
