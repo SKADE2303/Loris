@@ -75,7 +75,7 @@ const HelpEditorForm = (props) => {
       }
       swal.fire({
         title: t('Content update successful!',
-           {ns: 'help_editor'}),
+          {ns: 'help_editor'}),
         type: 'success',
         confirmButtonText: t('Close', {ns: 'help_editor'}),
       });
@@ -83,7 +83,7 @@ const HelpEditorForm = (props) => {
       console.error(error);
       swal.fire({
         title: t('Content update unsuccessful.',
-           {ns: 'help_editor'}),
+          {ns: 'help_editor'}),
         text: t('Something went wrong', {ns: 'help_editor'}),
         type: 'error',
         confirmButtonText: t('Try again', {ns: 'help_editor'}),
@@ -117,7 +117,7 @@ const HelpEditorForm = (props) => {
             <div className="col-sm-9 col-sm-offset-3">
               <p><small>
                 {t('Open the help dialog to preview the changes.',
-                   {ns: 'help_editor'})}
+                  {ns: 'help_editor'})}
               </small></p>
               <input
                 className="btn btn-sm btn-primary"
