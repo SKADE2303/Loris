@@ -99,7 +99,8 @@ const WidgetIndex = (props) => {
     const convertBarToCSV = (data) => {
       const csvRows = [];
       // Adding headers row
-      const headers = [t('Labels', {ns: 'statistics'}), ...Object.keys(data.datasets)];
+      const headers = [t('Labels', {ns: 'statistics'}),
+        ...Object.keys(data.datasets)];
       csvRows.push(headers.join(','));
       // Adding data rows
       const maxDatasetLength = Math.max(

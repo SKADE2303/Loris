@@ -49,7 +49,7 @@ const progressBarBuilder = (data) => {
                   title={`${data['non_binary_percent']}% other`}>
                   <p>
                     {data['non_binary_total']}<br/>{t('Other',
-                       {ns: 'statistics'})}
+                      {ns: 'statistics'})}
                   </p>
                 </div>
           }
@@ -61,7 +61,7 @@ const progressBarBuilder = (data) => {
           data['recruitment_target'] &&
             <small>
               {t('Recruitment target of %s was reached.',
-                 {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
+                {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
               {' '}{t('total participants.', {ns: 'statistics'})}
             </small>
         }
@@ -101,14 +101,14 @@ const progressBarBuilder = (data) => {
                   title={`${data['non_binary_percent']}% other`}>
                   <p>
                     {data['non_binary_total']}<br/>{t('Other',
-                       {ns: 'statistics'})}
+                      {ns: 'statistics'})}
                   </p>
                 </div>
           }
           {
             data['recruitment_target'] &&
                 <p className='pull-right small target'>
-                  {t('Target', 
+                  {t('Target',
                     {ns: 'statistics'})}: {data['recruitment_target']}
                 </p>
           }
@@ -117,7 +117,7 @@ const progressBarBuilder = (data) => {
           data['recruitment_target'] &&
             <small>
               {t('Recruitment target of %s not reached.',
-                 {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
+                {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
               {' '}{t('total participants.', {ns: 'statistics'})}
             </small>
         }
