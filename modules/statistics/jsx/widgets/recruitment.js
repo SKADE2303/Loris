@@ -89,7 +89,8 @@ const Recruitment = (props) => {
     [props.data]
   );
 
-  return loading ? <Panel title={t('Recruitment', {ns: 'statistics'})}><Loader/></Panel> : (
+  return loading ? <Panel title={t('Recruitment',
+    {ns: 'statistics'})}><Loader/></Panel> : (
     <>
       <Panel
         title={t('Recruitment', {ns: 'statistics'})}
@@ -116,7 +117,9 @@ const Recruitment = (props) => {
                         className="btn btn-default btn-xs"
                         onClick={() => setShowFiltersBreakdown((prev) => !prev)}
                       >
-                        {showFiltersBreakdown ? t('Hide Filters', {ns: 'statistics'}) : t('Show Filters', {ns: 'statistics'})}
+                        {showFiltersBreakdown ? t('Hide Filters',
+                          {ns: 'statistics'}) : t('Show Filters',
+                          {ns: 'statistics'})}
                       </button>
                     </div>
                     {showFiltersBreakdown && (
@@ -147,7 +150,8 @@ const Recruitment = (props) => {
                     </div>
                   </>
                 ) : (
-                  <p>{t('There have been no candidates registered yet.', {ns: 'statistics'})}</p>
+                  <p>{t('There have been no candidates registered yet.',
+                    {ns: 'statistics'})}</p>
                 ),
             title: t('Recruitment - site breakdown', {ns: 'statistics'}),
             onToggleFilters: () => {

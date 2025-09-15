@@ -216,7 +216,8 @@ const StudyProgression = (props) => {
                   {showChart('total_recruitment', 'siterecruitment_line')}
                 </div>
               ) : (
-                <p>{t('There have been no candidates registered yet.', {ns: 'statistics'})}</p>
+                <p>{t('There have been no candidates registered yet.',
+                  {ns: 'statistics'})}</p>
               ),
             title: title('Site Recruitment'),
             onToggleFilters: () => setShowFiltersRecruitment((prev) => !prev),

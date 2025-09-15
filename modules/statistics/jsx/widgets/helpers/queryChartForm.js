@@ -2,10 +2,6 @@ import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {SelectElement, FormElement, ButtonElement} from 'jsx/Form';
 import {useTranslation} from 'react-i18next';
-<<<<<<< HEAD
-
-=======
->>>>>>> 463cfe75b (Add translation)
 
 /**
  * QueryChartForm - a form used for statistics query to modify graphs/charts.
@@ -20,11 +16,7 @@ const QueryChartForm = (props) => {
   const [optionsVisits, setOptionsVisits] = useState({});
   const [optionsStatus, setOptionsStatus] = useState({});
   const [formDataObj, setFormDataObj] = useState({});
-<<<<<<< HEAD
   const {t} = useTranslation();
-=======
-  const {t} = useTranslation(['statistics', 'loris']);
->>>>>>> 463cfe75b (Add translation)
 
   /**
    * useEffect - modified to run when props.data updates.
@@ -83,7 +75,7 @@ const QueryChartForm = (props) => {
         const newFormData = {
           ...prevState,
           [formElement]: normalizedValue.length > 0
-            ?normalizedValue : undefined,
+            ? normalizedValue : undefined,
         };
         props.callback(newFormData);
         return newFormData;
@@ -96,6 +88,7 @@ const QueryChartForm = (props) => {
   };
 
   const clearSelection = t('-- Clear Selection --', {ns: 'statistics'});
+
   /**
    * Renders the React component.
    *
@@ -120,8 +113,7 @@ const QueryChartForm = (props) => {
               {t('Project', {ns: 'loris'})}</label>
             <SelectElement
               name='selectedProjects'
-              options={{__clear__: t('-- Clear Selection --', {ns: 'statistics'}),
-                ...optionsProjects}}
+              options={{__clear__: clearSelection, ...optionsProjects}}
               multiple={true}
               emptyOption={false}
               value={formDataObj['selectedProjects']}
@@ -146,14 +138,8 @@ const QueryChartForm = (props) => {
               marginBottom: '5px',
               display: 'block'}}>{t('Cohort', {ns: 'loris'})}</label>
             <SelectElement
-<<<<<<< HEAD
-              name ='selectedCohorts'
-              options ={{__clear__: clearSelection,
-=======
               name='selectedCohorts'
-              options={{__clear__: t('-- Clear Selection --', {ns: 'statistics'}),
->>>>>>> 463cfe75b (Add translation)
-                ...optionsCohorts}}
+              options={{__clear__: clearSelection, ...optionsCohorts}}
               multiple={true}
               emptyOption={false}
               value={formDataObj['selectedCohorts']}
@@ -178,21 +164,12 @@ const QueryChartForm = (props) => {
               marginBottom: '5px',
               display: 'block'}}>{t('Site', {ns: 'loris'})}</label>
             <SelectElement
-<<<<<<< HEAD
-              name ='selectedSites'
-              options ={{__clear__: clearSelection, ...optionsSites}}
-              multiple ={true}
-              emptyOption ={false}
-              value ={formDataObj['selectedSites']}
-              onUserInput ={(name, value) => {
-=======
               name='selectedSites'
-              options={{__clear__: t('-- Clear Selection --', {ns: 'statistics'}), ...optionsSites}}
+              options={{__clear__: clearSelection, ...optionsSites}}
               multiple={true}
               emptyOption={false}
               value={formDataObj['selectedSites']}
               onUserInput={(name, value) => {
->>>>>>> 463cfe75b (Add translation)
                 if (value.includes('__clear__')) {
                   setFormData(name, []);
                 } else {
@@ -213,14 +190,8 @@ const QueryChartForm = (props) => {
               marginBottom: '5px',
               display: 'block'}}>{t('Visit', {ns: 'loris'})}</label>
             <SelectElement
-<<<<<<< HEAD
-              name ='selectedVisits'
-              options ={{__clear__: clearSelection,
-=======
               name='selectedVisits'
-              options={{__clear__: t('-- Clear Selection --', {ns: 'statistics'}),
->>>>>>> 463cfe75b (Add translation)
-                ...optionsVisits}}
+              options={{__clear__: clearSelection, ...optionsVisits}}
               multiple={true}
               emptyOption={false}
               value={formDataObj['selectedVisits']}
@@ -239,25 +210,14 @@ const QueryChartForm = (props) => {
         )}
 
         {/* Status Section */}
-        {Object.keys(props.data['options']['participantStatus']).length > 0
-        && (
+        {Object.keys(props.data['options']['participantStatus']).length > 0 && (
           <div>
             <label style={{fontWeight: 'bold',
               marginBottom: '5px',
-<<<<<<< HEAD
-              display: 'block'}}>
-              {t('Participant Status', {ns: 'loris'})}
-            </label>
-            <SelectElement
-              name ='selectedParticipantStatus'
-              options ={{__clear__: clearSelection,
-=======
-              display: 'block'}}>{t('Status', {ns: 'loris'})}</label>
+              display: 'block'}}>{t('Participant Status', {ns: 'loris'})}</label>
             <SelectElement
               name='selectedParticipantStatus'
-              options={{__clear__: t('-- Clear Selection --', {ns: 'statistics'}),
->>>>>>> 463cfe75b (Add translation)
-                ...optionsStatus}}
+              options={{__clear__: clearSelection, ...optionsStatus}}
               multiple={true}
               emptyOption={false}
               value={formDataObj['selectedParticipantStatus']}
@@ -281,15 +241,9 @@ const QueryChartForm = (props) => {
         justifyContent: 'center',
         marginTop: '20px'}}>
         <ButtonElement
-<<<<<<< HEAD
-          label={t('Clear Filters', {ns: 'loris'})}
-          onUserInput ={resetFilters}
-          buttonClass ='btn btn-sm btn-primary'
-=======
           label={t('Clear Filters', {ns: 'statistics'})}
           onUserInput={resetFilters}
           buttonClass='btn btn-sm btn-primary'
->>>>>>> 463cfe75b (Add translation)
         />
       </div>
     </FormElement>

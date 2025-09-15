@@ -8,7 +8,6 @@
  * @param {string} url for the request
  * @return {object} json retrieved from the server.
  */
-import {useTranslation} from 'react-i18next';
 
 const fetchData = async (url) => {
   let response;

@@ -9,7 +9,7 @@ import {useTranslation} from 'react-i18next';
  */
 const progressBarBuilder = (data) => {
   const {t} = useTranslation(['statistics', 'loris']);
-  
+
   let title;
   let content;
   title = <h5>
@@ -48,7 +48,8 @@ const progressBarBuilder = (data) => {
                   style={{width: `${data['non_binary_percent']}%`}}
                   title={`${data['non_binary_percent']}% other`}>
                   <p>
-                    {data['non_binary_total']}<br/>{t('Other', {ns: 'statistics'})}
+                    {data['non_binary_total']}<br/>{t('Other',
+                       {ns: 'statistics'})}
                   </p>
                 </div>
           }
@@ -59,7 +60,8 @@ const progressBarBuilder = (data) => {
         {
           data['recruitment_target'] &&
             <small>
-              {t('Recruitment target of %s was reached.', {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
+              {t('Recruitment target of %s was reached.',
+                 {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
               {' '}{t('total participants.', {ns: 'statistics'})}
             </small>
         }
@@ -98,21 +100,24 @@ const progressBarBuilder = (data) => {
                   style={{width: `${data['non_binary_percent']}%`}}
                   title={`${data['non_binary_percent']}% other`}>
                   <p>
-                    {data['non_binary_total']}<br/>{t('Other', {ns: 'statistics'})}
+                    {data['non_binary_total']}<br/>{t('Other',
+                       {ns: 'statistics'})}
                   </p>
                 </div>
           }
           {
             data['recruitment_target'] &&
                 <p className='pull-right small target'>
-                  {t('Target', {ns: 'statistics'})}: {data['recruitment_target']}
+                  {t('Target', 
+                    {ns: 'statistics'})}: {data['recruitment_target']}
                 </p>
           }
         </div>
         {
           data['recruitment_target'] &&
             <small>
-              {t('Recruitment target of %s not reached.', {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
+              {t('Recruitment target of %s not reached.',
+                 {ns: 'statistics'}).replace('%s', data['recruitment_target'])}
               {' '}{t('total participants.', {ns: 'statistics'})}
             </small>
         }

@@ -8,7 +8,7 @@ import Modal from 'Modal';
 import Loader from 'Loader';
 import {SelectElement} from 'jsx/Form';
 import {useTranslation} from 'react-i18next';
-
+import i18n from 'I18nSetup';
 import '../css/WidgetIndex.css';
 
 import {setupCharts} from './widgets/helpers/chartBuilder';
@@ -318,6 +318,7 @@ const WidgetIndex = (props) => {
 };
 WidgetIndex.propTypes = {
   baseURL: PropTypes.string,
+  t: PropTypes.func,
 };
 
 /**
