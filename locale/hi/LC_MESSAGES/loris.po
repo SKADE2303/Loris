@@ -284,6 +284,9 @@ msgstr "सक्रिय"
 msgid "Ethnicity"
 msgstr "जातीयता"
 
+msgid "Save"
+msgstr "सहेजें"
+
 # Data table strings
 msgid "{{pageCount}} rows displayed of {{totalCount}}."
 msgstr "{{totalCount}} में से {{pageCount}} पंक्तियाँ प्रदर्शित"

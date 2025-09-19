@@ -309,6 +309,9 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
+msgid "Save"
+msgstr ""
+
 # Data table strings
 msgid "{{pageCount}} rows displayed of {{totalCount}}."
 msgstr ""

@@ -64,30 +64,12 @@ class IssueTrackerIndex extends Component {
    * Additionally add hiddenHeaders to global loris variable
    * for easy access by columnFormatter.
    *
-   * @return {object} 
+   * @return {object}
    */
   fetchData() {
-    const {t} = this.props;
-    const columnMap = {
-    issueID: t('Issue ID', { ns: 'issue_tracker' }),
-    title: t('Title', { ns: 'loris' }),
-    priority: t('Priority', { ns: 'issue_tracker' }),
-    pscid: t('PSCID', { ns: 'loris' }),
-    visitLabel: t('Visit Label', { ns: 'loris' }),
-    };
     return fetch(this.props.dataURL, {credentials: 'same-origin'})
       .then((resp) => resp.json())
-      .then((data) => {
-      data.data = data.data.map((row) => ({
-        issueID: row[columnMap.issueID] || row['IssueID'],
-        title: row[columnMap.title] || row['Title'],
-        priority: row[columnMap.priority] || row['Priority'],
-        pscid: row[columnMap.pscid] || row['PSCID'],
-        visitLabel: row[columnMap.visitLabel] || row['Visit Label'],
-        ...row,
-      }));
-      this.setState({ data });
-    })
+      .then((data) => this.setState({data}))
       .catch((error) => {
         this.setState({error: true});
         console.error(error);
@@ -112,56 +94,95 @@ class IssueTrackerIndex extends Component {
    * @return {*} a formated table cell for a given column
    */
   formatColumn(column, cell, row) {
-    const fieldKey = this.fieldKeyMap[column] || null;
-    // default
-    console.log('fieldKey:', fieldKey);
-    console.log('cell:', cell);
-    console.log('row:', row);
-    console.log('column:', column);
     let result = <td>{cell}</td>;
+    let link;
+    const {t} = this.props;
+const issueIDKey = t('Issue ID', { ns: 'issue_tracker', defaultValue: 'Issue ID' });
+const titleKey   = t('Title',    { ns: 'loris',         defaultValue: 'Title' });
+const priorityKey = t('Priority',{ ns: 'issue_tracker', defaultValue: 'Priority' });
+const siteKey    = t('Site',     { ns: 'loris',         defaultValue: 'Site' });
+const pscidKey   = t('PSCID',    { ns: 'loris',         defaultValue: 'PSCID' });
+const visitLabelKey = t('Visit Label', { ns: 'loris',    defaultValue: 'Visit Label' });
+const sessionIDKey  = t('Session ID',  { ns: 'loris',    defaultValue: 'Session ID' });
 
-    if (fieldKey === 'title' && row && typeof row.Title !== 'undefined') {
-      return <td><a href={`${loris.BaseURL}/issue_tracker/issue/${row.issueID}`}>{row.Title}</a></td>;
-    }
-
-    if (fieldKey === 'issueID') {
-      return <td><a href={`${loris.BaseURL}/issue_tracker/issue/${cell}`}>{cell}</a></td>;
-    }
-
-    if (fieldKey === 'priority') {
-      switch (String(cell)) {
+    switch (column) {
+    case titleKey:
+      link = (
+        <a
+          href={loris.BaseURL+'/issue_tracker/issue/'+row[issueIDKey]}
+        >
+          {row[titleKey]}
+        </a>
+      );
+      result = <td>{link}</td>;
+      break;
+    case issueIDKey:
+      link = (
+        <a
+          href={loris.BaseURL+'/issue_tracker/issue/'+row[issueIDKey]}
+        >
+          {cell}
+        </a>
+      );
+      result = <td>{link}</td>;
+      break;
+    case priorityKey:
+      switch (cell) {
       case 'normal':
-        return <td style={{background: '#CCFFCC'}}>Normal</td>;
+        result = <td style={{background: '#CCFFCC'}}>Normal</td>;
+        break;
       case 'high':
-        return <td style={{background: '#EEEEAA'}}>High</td>;
+        result = <td style={{background: '#EEEEAA'}}>High</td>;
+        break;
       case 'urgent':
-        return <td style={{background: '#CC6600'}}>Urgent</td>;
+        result = <td style={{background: '#CC6600'}}>Urgent</td>;
+        break;
       case 'immediate':
-        return <td style={{background: '#E4A09E'}}>Immediate</td>;
+        result = <td style={{background: '#E4A09E'}}>Immediate</td>;
+        break;
       case 'low':
-        return <td style={{background: '#99CCFF'}}>Low</td>;
+        result = <td style={{background: '#99CCFF'}}>Low</td>;
+        break;
       default:
-        return <td>None</td>;
+        result = <td>None</td>;
       }
-    }
-
-    if (fieldKey === 'site') {
-      if (Array.isArray(cell) &&
-        JSON.stringify(Object.keys(this.state.data.centerIDs)) === JSON.stringify(cell)
+      break;
+    case siteKey:
+      // if cell is an array containing all sites values
+      if (
+        JSON.stringify(
+          Object.keys(this.state.data.centerIDs)) == JSON.stringify(cell)
       ) {
-        return <td>All Sites</td>;
+        result = <td>All Sites</td>;
+      } else {
+        result = <td>
+          {cell.map((v) =>
+            this.state.data.fieldOptions.sites[v]).filter(
+            (v) => v != undefined).join(', ')}
+        </td>;
       }
-      if (Array.isArray(cell)) {
-        return <td>{cell.map((v) => this.state.data.fieldOptions.sites[v]).filter((v) => v !== undefined).join(', ')}</td>;
+      break;
+    case pscidKey:
+      if (row[pscidKey] !== null) {
+        link = (
+          <a href={loris.BaseURL+'/'+row[pscidKey] + '/'}>
+            {cell}
+          </a>
+        );
+        result = <td>{link}</td>;
       }
-    }
-
-    if (fieldKey === 'pscid' && row && row.PSCID !== null) {
-      return <td><a href={`${loris.BaseURL}/${row.CandID}/`}>{cell}</a></td>;
-    }
-
-    if (fieldKey === 'visitLabel' && row && row['Visit Label'] !== null) {
-      return <td><a href={`${loris.BaseURL}/instrument_list/?candID=${row.CandID}&sessionID=${row.SessionID}`}>{cell}</a></td>;
+      break;
+    case visitLabelKey:
+      if (row[visitLabelKey] !== null) {
+        link = (
+          <a href={loris.BaseURL + '/instrument_list/?candID=' +
+                  row[pscidKey] + '&sessionID=' + row[sessionIDKey]}>
+            {cell}
+          </a>
+        );
+        result = <td>{link}</td>;
+      }
+      break;
     }
 
     return result;
@@ -174,7 +195,7 @@ class IssueTrackerIndex extends Component {
    */
   render() {
     const {t} = this.props;
-    
+
     // If error occurs, return a message.
     // XXX: Replace this with a UI component for 500 errors.
     if (this.state.error) {
@@ -193,90 +214,86 @@ class IssueTrackerIndex extends Component {
      */
     const options = this.state.data.fieldOptions;
     const fields = [
-      {key: 'issueID', label: t('Issue ID', {ns: 'issue_tracker'}), show: true, filter: {
+      {label: t('Issue ID', {ns: 'issue_tracker'}), show: true, filter: {
         name: 'issueID',
         type: 'text',
       }},
-      {key: 'title', label: t('Title', {ns: 'loris'}), show: true, filter: {
+      {label: t('Title', {ns: 'loris'}), show: true, filter: {
         name: 'title',
         type: 'text',
       }},
-      {key: 'module', label: t('Module', {ns: 'loris'}), show: true, filter: {
+      {label: t('Module', {ns: 'loris'}), show: true, filter: {
         name: 'module',
         type: 'select',
         options: options.modules,
       }},
-      {key: 'category', label: t('Category', {ns: 'loris'}), show: true, filter: {
+      {label: t('Category', {ns: 'loris'}), show: true, filter: {
         name: 'category',
         type: 'select',
         options: options.categories,
       }},
-      {key: 'reporter', label: t('Reporter', {ns: 'issue_tracker'}), show: true, filter: {
+      {label: t('Reporter', {ns: 'issue_tracker'}), show: true, filter: {
         name: 'reporter',
         type: 'select',
         options: options.reporters,
       }},
-      {key: 'assignee', label: t('Assignee', {ns: 'issue_tracker'}), show: true, filter: {
+      {label: t('Assignee', {ns: 'issue_tracker'}), show: true, filter: {
         name: 'assignee',
         type: 'select',
         options: options.assignees,
       }},
-      {key: 'status', label: t('Status', {ns: 'loris'}), show: true, filter: {
+      {label: t('Status', {ns: 'loris'}), show: true, filter: {
         name: 'status',
         type: 'multiselect',
         options: options.statuses,
       }},
-      {key: 'priority', label: t('Priority', {ns: 'issue_tracker'}), show: true, filter: {
+      {label: t('Priority', {ns: 'issue_tracker'}), show: true, filter: {
         name: 'priority',
         type: 'select',
         sortByValue: false,
         options: options.priorities,
       }},
-      {key: 'site', label: t('Site', {ns: 'loris'}), show: true, filter: {
+      {label: t('Site', {ns: 'loris'}), show: true, filter: {
         name: 'site',
         type: 'multiselect',
         options: options.sites,
       }},
-      {key: 'pscid', label: t('PSCID', {ns: 'loris'}), show: true, filter: {
+      {label: t('PSCID', {ns: 'loris'}), show: true, filter: {
         name: 'pscid',
         type: 'text',
       }},
-      {key: 'visitLabel', label: t('Visit Label', {ns: 'loris'}), show: true, filter: {
+      {label: t('Visit Label', {ns: 'loris'}), show: true, filter: {
         name: 'visitLabel',
         type: 'text',
       }},
-      {key: 'dateCreated', label: t('Date Created', {ns: 'issue_tracker'}), show: false, filter: {
+      {label: t('Date Created', {ns: 'issue_tracker'}), show: false, filter: {
         name: 'dateCreated',
         type: 'date',
       }},
-      {key: 'lastUpdate', label: t('Last Update', {ns: 'issue_tracker'}), show: true},
-      {key: 'sessionID', label: t('SessionID', {ns: 'issue_tracker'}), show: false},
-      {key: 'dccid', label: t('DCCID', {ns: 'loris'}), show: false},
-      {key: 'watching', label: t('Watching', {ns: 'issue_tracker'}), show: false, filter: {
+      {label: t('Last Update', {ns: 'issue_tracker'}), show: true},
+      {label: t('SessionID', {ns: 'issue_tracker'}), show: false},
+      {label: t('DCCID', {ns: 'loris'}), show: false},
+      {label: t('Watching', {ns: 'issue_tracker'}), show: false, filter: {
         name: 'watching',
         type: 'checkbox',
       }},
     ];
 
-    // expose a stable label->key map so formatColumn can detect logical columns
-    this.fieldKeyMap = {};
-    fields.forEach((f) => { this.fieldKeyMap[f.label] = f.key; });
-
-    const filterPresets = {
-      all: {label: t('All Issues', {ns: 'issue_tracker'}), filter: {}},
-      active: {label: t('Active Issues', {ns: 'issue_tracker'}), filter: {
+    const filterPresets = [
+      {label: t('All Issues', {ns: 'issue_tracker'}), filter: {}},
+      {label: t('Active Issues', {ns: 'issue_tracker'}), filter: {
         status: {
           value: ['acknowledged', 'assigned', 'feedback', 'new', 'resolved'],
         },
       }},
-      closed: {label: t('Closed Issues', {ns: 'issue_tracker'}), filter: {
+      {label: t('Closed Issues', {ns: 'issue_tracker'}), filter: {
         status: {value: ['closed'], exactMatch: true},
       }},
-    };
+    ];
 
     // Add "My Issues" filter only if user has any issues
     if (this.state.data.userIssueCount > 0) {
-      filterPresets.myIssues = {
+      filterPresets.push({
         label: t('My Issues', {ns: 'issue_tracker'}),
         filter: {
           assignee: {
@@ -286,7 +303,7 @@ class IssueTrackerIndex extends Component {
             value: ['acknowledged', 'assigned', 'feedback', 'new', 'resolved'],
           },
         },
-      };
+      });
     }
 
     const addIssue = () => {
@@ -325,15 +342,10 @@ class IssueTrackerIndex extends Component {
             name="issuesTracker"
             data={this.state.data.data}
             fields={fields}
-            filterPresets={Object.values(filterPresets)}
+            filterPresets={filterPresets}
             actions={actions}
             getFormattedCell={this.formatColumn}
           />
-          <ul>
-            {Object.values(filterPresets).map((preset, idx) => (
-              <li key={preset.label || idx}>{preset.label}</li>
-            ))}
-          </ul>
         </TabPane>
         <TabPane TabId="batch">
           <IssueTrackerBatchMode
