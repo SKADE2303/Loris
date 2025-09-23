@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import swal from 'sweetalert2';
 import {FileElement} from 'jsx/Form';
+import {withTranslation} from 'react-i18next';
 
 /**
  * Instrument Upload Form component
@@ -39,6 +40,7 @@ class InstrumentUploadForm extends Component {
    * Upload instrument
    */
   upload() {
+    const {t} = this.props;
     const data = new FormData();
     data.append('install_file', this.state.selectedFile);
 
@@ -50,7 +52,7 @@ class InstrumentUploadForm extends Component {
       .then((resp) => {
         if (resp.status == 201) {
           swal.fire({
-            title: 'Installation Successful!',
+            title: t('Installation Successful!', {ns: 'instrument_manager'}),
             type: 'success',
           }).then(function() {
             window.location.assign(loris.BaseURL + '/instrument_manager/');
@@ -61,7 +63,7 @@ class InstrumentUploadForm extends Component {
       .then((data) => {
         if (data.message) {
           swal.fire({
-            title: 'Upload Successful!',
+            title: t('Upload Successful!', {ns: 'instrument_manager'}),
             type: 'success',
             text: data.message,
           }).then(function() {
@@ -70,7 +72,7 @@ class InstrumentUploadForm extends Component {
         }
         if (data.error) {
           swal.fire({
-            title: 'An error occurred',
+            title: t('An error occurred', {ns: 'instrument_manager'}),
             type: 'error',
             text: data.error,
           });
@@ -87,18 +89,20 @@ class InstrumentUploadForm extends Component {
    * @return {JSX} - React markup for the component
    */
   render() {
+    const {t} = this.props;
     const disabled = () => this.state.selectedFile === null;
 
     return (
       <div className="row">
         <div className="col-xs-4">
           <div className="panel panel-primary">
-            <div className="panel-heading">Upload Instrument</div>
+            <div className="panel-heading">{t('Upload Instrument',
+              {ns: 'instrument_manager'})}</div>
             <div className="panel-body">
               <div className="col-xs-12">
                 <FileElement
                   name='install_file'
-                  label='Instrument file'
+                  label={t('Instrument file', {ns: 'instrument_manager'})}
                   onUserInput={this.fileSelected}
                   value={this.state.selectedFile}
                 />
@@ -107,7 +111,7 @@ class InstrumentUploadForm extends Component {
                   onClick={this.upload}
                   disabled={disabled()}
                 >
-                  Install
+                  {t('Install', {ns: 'instrument_manager'})}
                 </button>
               </div>
             </div>
@@ -120,6 +124,8 @@ class InstrumentUploadForm extends Component {
 
 InstrumentUploadForm.propTypes = {
   action: PropTypes.string.isRequired,
+  t: PropTypes.func,
 };
 
-export default InstrumentUploadForm;
+export default withTranslation(
+  ['instrument_manager', 'loris'])(InstrumentUploadForm);

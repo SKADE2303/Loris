@@ -114,6 +114,8 @@ locales:
 	msgfmt -o modules/instrument_builder/locale/ja/LC_MESSAGES/instrument_builder.mo modules/instrument_builder/locale/ja/LC_MESSAGES/instrument_builder.po
 	msgfmt -o modules/instrument_list/locale/ja/LC_MESSAGES/instrument_list.mo modules/instrument_list/locale/ja/LC_MESSAGES/instrument_list.po
 	msgfmt -o modules/instrument_manager/locale/ja/LC_MESSAGES/instrument_manager.mo modules/instrument_manager/locale/ja/LC_MESSAGES/instrument_manager.po
+	msgfmt -o modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.mo modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.po
+	npx i18next-conv -l hi -s modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.po -t modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.json
 	msgfmt -o modules/instruments/locale/ja/LC_MESSAGES/instruments.mo modules/instruments/locale/ja/LC_MESSAGES/instruments.po
 	msgfmt -o modules/issue_tracker/locale/ja/LC_MESSAGES/issue_tracker.mo modules/issue_tracker/locale/ja/LC_MESSAGES/issue_tracker.po
 	msgfmt -o modules/login/locale/ja/LC_MESSAGES/login.mo modules/login/locale/ja/LC_MESSAGES/login.po
@@ -147,6 +149,8 @@ data_release:
 	target=data_release npm run compile
 
 instrument_manager:
+	msgfmt -o modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.mo modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.po
+	npx i18next-conv -l hi -s modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.po -t modules/instrument_manager/locale/hi/LC_MESSAGES/instrument_manager.json
 	target=instrument_manager npm run compile
 
 dataquery:

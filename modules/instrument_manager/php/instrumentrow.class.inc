@@ -84,17 +84,17 @@ class InstrumentRow implements \LORIS\Data\DataInstance
     {
         $linst = $this->_path . "/project/instruments/$instrument.linst";
         if (file_exists($linst)) {
-            return 'Instrument Builder';
+            return dgettext("instrument_manager", "Instrument Builder");
         }
 
         $php = $this->_path .
             "/project/instruments/NDB_BVL_Instrument_$instrument.class.inc";
 
         if (file_exists($php)) {
-            return 'PHP';
+            return dgettext("instrument_manager", "PHP");
         }
 
-        return 'Missing';
+        return dgettext("instrument_manager", "Missing");
     }
 
     /**
@@ -202,7 +202,7 @@ class InstrumentRow implements \LORIS\Data\DataInstance
             ]
         );
         if (!$exists) {
-            return "Column $columnname invalid";
+            return dgettext("instrument_manager", "Column $columnname invalid");
         }
         return null;
     }
@@ -281,14 +281,14 @@ class InstrumentRow implements \LORIS\Data\DataInstance
                     }
                 }
                 if ('enum(' . join(",", $options) . ')' !== $db_enum) {
-                    return "$name enum invalid";
+                    return dgettext("instrument_manager", "$name enum invalid");
                 }
             default:
                 break;
             }
         }
 
-        return "Appears Valid";
+        return dgettext("instrument_manager", "Appears Valid");
     }
 
     /**
@@ -321,13 +321,13 @@ class InstrumentRow implements \LORIS\Data\DataInstance
                     ]
                 );
                 if ($exists <= 0) {
-                    return "Missing page '" . trim($pieces[2]) . "'";
+                    return dgettext("instrument_manager", "Missing page '" . trim($pieces[2]) . "'");
                 }
             default:
                 break;
             }
         }
-        return 'Appears Valid';
+        return dgettext("instrument_manager", "Appears Valid");
     }
 
     /**

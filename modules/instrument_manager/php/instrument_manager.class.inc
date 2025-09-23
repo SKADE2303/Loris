@@ -88,7 +88,7 @@ class Instrument_Manager extends \DataFrameworkMenu
         // Ensure the server is properly configured.
         if (!$this->canWriteFiles()) {
             return new \LORIS\Http\Response\JSON\InternalServerError(
-                self::CANNOT_WRITE_FILES
+                dgettext("instrument_manager", self::CANNOT_WRITE_FILES)
             );
         }
 

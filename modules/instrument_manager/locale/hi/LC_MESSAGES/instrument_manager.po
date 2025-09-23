@@ -1,0 +1,147 @@
+# Default LORIS strings to be translated (English).
+# Copy this to a language specific file and add translations to the
+# new file.
+# Copyright (C) 2025
+# This file is distributed under the same license as the LORIS package.
+# Dave MacFarlane <dave.macfarlane@mcin.ca>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LORIS 27\n"
+"Report-Msgid-Bugs-To: https://github.com/aces/Loris/issues\n"
+"POT-Creation-Date: 2025-04-08 14:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgid "Instrument Manager"
+msgstr "इंस्ट्रूमेंट प्रबंधक"
+
+msgid "Instrument Manager"
+msgstr "इंस्ट्रूमेंट प्रबंधक"
+
+msgid "Permission Required"
+msgstr "अनुमति आवश्यक"
+
+msgid "No Permissions enforced."
+msgstr "कोई अनुमति लागू नहीं की गई।"
+
+msgid "Add Permissions"
+msgstr "अनुमति जोड़ें"
+
+msgid "Modify Permissions"
+msgstr "अनुमति संशोधित करें"
+
+msgid "Instrument"
+msgstr "इंस्ट्रूमेंट"
+
+msgid "Instrument Type"
+msgstr "इंस्ट्रूमेंट प्रकार"
+
+msgid "Instrument Builder"
+msgstr "इंस्ट्रूमेंट बिल्डर"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Missing"
+msgstr "गायब"
+
+msgid "Column %s invalid"
+msgstr "कॉलम %s अमान्य है"
+
+msgid "%s enum invalid"
+msgstr "%s एनम अमान्य है"
+
+msgid "Appears Valid"
+msgstr "मान्य प्रतीत होता है"
+
+msgid "Missing page '%s'"
+msgstr "पेज '%s' गायब है"
+
+msgid "Table Installed"
+msgstr "तालिका स्थापित"
+
+msgid "Exists"
+msgstr "मौजूद है"
+
+msgid "Table Valid"
+msgstr "तालिका मान्य"
+
+msgid "Pages Valid"
+msgstr "पेज मान्य"
+
+msgid "Browse"
+msgstr "ब्राउज़ करें"
+
+msgid "Oops.."
+msgstr "उफ़.."
+
+msgid "Something went wrong!"
+msgstr "कुछ गड़बड़ हो गई!"
+
+msgid "Edit Permissions for"
+msgstr "इसके लिए अनुमतियाँ संपादित करें"
+
+msgid "Select the permissions required for accessing"
+msgstr "पहुंचने के लिए आवश्यक अनुमतियाँ चुनें"
+
+msgid "in the dropdown below."
+msgstr "नीचे दिए गए ड्रॉपडाउन में।"
+
+msgid "Any user accessing the instrument (either for viewing the data or data entry) must have one of the access permissions selected."
+msgstr "इंस्ट्रूमेंट तक पहुँचने वाला कोई भी उपयोगकर्ता (डेटा देखने या डेटा दर्ज करने के लिए) चुनी गई पहुँच अनुमतियों में से एक होना चाहिए।"
+
+msgid "A user with <em>any</em> of the selected permissions will be able to access"
+msgstr "<em>किसी भी</em> चयनित अनुमति वाला उपयोगकर्ता पहुँचने में सक्षम होगा"
+
+msgid "If no permissions are selected, the default LORIS permissions will be enforced for this instrument."
+msgstr "यदि कोई अनुमति नहीं चुनी जाती है, तो इस इंस्ट्रूमेंट के लिए डिफ़ॉल्ट LORIS अनुमतियाँ लागू होंगी।"
+
+msgid "Upload"
+msgstr "अपलोड करें"
+
+msgid "Instrument installation is not possible given the current server configuration; the LORIS 'adminUser' is not configured properly. File upload is still possible but instruments will need to be installed manually"
+msgstr "वर्तमान सर्वर कॉन्फ़िगरेशन के अनुसार इंस्ट्रूमेंट स्थापना संभव नहीं है; LORIS 'adminUser' ठीक से कॉन्फ़िगर नहीं है। फ़ाइल अपलोड अभी भी संभव है लेकिन इंस्ट्रूमेंट को मैन्युअल रूप से स्थापित करना होगा।"
+
+msgid "Installation is not possible given the current server configuration. Please contact your administrator if you require this functionality"
+msgstr "वर्तमान सर्वर कॉन्फ़िगरेशन के अनुसार स्थापना संभव नहीं है। यदि आपको इस सुविधा की आवश्यकता है तो कृपया अपने प्रशासक से संपर्क करें।"
+
+msgid "Upload Instrument"
+msgstr "इंस्ट्रूमेंट अपलोड करें"
+
+msgid "Instrument file"
+msgstr "इंस्ट्रूमेंट फ़ाइल"
+
+msgid "Install"
+msgstr "इंस्टॉल करें"
+
+msgid "Installation Successful!"
+msgstr "स्थापना सफल रही!"
+
+msgid "Upload Successful!"
+msgstr "अपलोड सफल रहा!"
+
+msgid "An error occurred"
+msgstr "एक त्रुटि हुई"
+
+msgid "This instrument already exists in the test battery."
+msgstr "यह इंस्ट्रूमेंट पहले से ही टेस्ट बैटरी में मौजूद है।"
+
+msgid "Automatic installation of instruments is not possible given the current server configuration. Please contact your administrator if you require this functionality."
+msgstr "वर्तमान सर्वर कॉन्फ़िगरेशन के अनुसार इंस्ट्रूमेंट की स्वचालित स्थापना संभव नहीं है। यदि आपको इस सुविधा की आवश्यकता है तो कृपया अपने प्रशासक से संपर्क करें।"
+
+msgid "This file has already been uploaded. Please contact your administrator to install the instrument."
+msgstr "यह फ़ाइल पहले ही अपलोड की जा चुकी है। कृपया इंस्ट्रूमेंट स्थापित करने के लिए अपने प्रशासक से संपर्क करें।"
+
+msgid "Uploaded file is not of type LINST or is too large."
+msgstr "अपलोड की गई फ़ाइल LINST प्रकार की नहीं है या बहुत बड़ी है।"
+
+msgid "File upload is successful but the installation failed. Please contact your administrator."
+msgstr "फ़ाइल अपलोड सफल रहा लेकिन स्थापना विफल रही। कृपया अपने प्रशासक से संपर्क करें।"
+
+msgid "File upload is successful but the instrument needs to be installed manually."
+msgstr "फ़ाइल अपलोड सफल रहा लेकिन इंस्ट्रूमेंट को मैन्युअल रूप से स्थापित करना होगा।"
