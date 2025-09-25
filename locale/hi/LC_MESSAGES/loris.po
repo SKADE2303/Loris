@@ -133,11 +133,19 @@ msgstr "दौरे का लेबल"
 msgid "Site"
 msgstr "साइट"
 
+<<<<<<< HEAD
 msgid "Module"
 msgstr "मॉड्यूल"
+=======
+msgid "Sites"
+msgstr "साइट्स"
+>>>>>>> aaebee6b2 (Translate .inc files)
 
 msgid "Project"
 msgstr "परियोजना"
+
+msgid "Projects"
+msgstr "प्रोजेक्ट्स"
 
 msgid "Cohort"
 msgstr "समूह"
@@ -175,6 +183,7 @@ msgstr "भ्रमण"
 msgid "An error occured while loading the page."
 msgstr "पृष्ठ लोड करते समय एक त्रुटि हुई।"
 
+<<<<<<< HEAD
 msgid "Entity Type"
 msgstr "इकाई प्रकार"
 
@@ -198,6 +207,10 @@ msgstr "अगला"
 
 msgid "Save"
 msgstr "सहेजें"
+=======
+msgid "Active"
+msgstr "सक्रिय"
+>>>>>>> aaebee6b2 (Translate .inc files)
 
 # Data table strings
 msgid "{{pageCount}} rows displayed of {{totalCount}}."

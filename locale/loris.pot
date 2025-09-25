@@ -129,7 +129,13 @@ msgstr ""
 msgid "Site"
 msgstr ""
 
+msgid "Sites"
+msgstr ""
+
 msgid "Project"
+msgstr ""
+
+msgid "Projects"
 msgstr ""
 
 msgid "Cohort"
@@ -190,6 +196,7 @@ msgid "Next"
 msgstr ""
 
 msgid "Save"
+msgid "Active"
 msgstr ""
 
 # Data table strings
