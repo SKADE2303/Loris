@@ -184,6 +184,15 @@ msgstr ""
 msgid "Visits"
 msgstr ""
 
+msgid "Browse"
+msgstr ""
+
+msgid "Oops.."
+msgstr ""
+
+msgid "Something went wrong!"
+msgstr ""
+
 msgid "An error occured while loading the page."
 msgstr ""
 
@@ -200,6 +209,18 @@ msgid "Hide Advanced Filters"
 msgstr ""
 
 msgid "Language"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Installation Successful!"
+msgstr ""
+
+msgid "Upload Successful!"
+msgstr ""
+
+msgid "An error occurred"
 msgstr ""
 
 # Data table strings
@@ -227,6 +248,9 @@ msgid "Uploaded"
 msgstr ""
 
 msgid "Total"
+msgstr ""
+
+msgid "Upload"
 msgstr ""
 
 # Common timepoint and vist terms

@@ -52,7 +52,7 @@ class InstrumentUploadForm extends Component {
       .then((resp) => {
         if (resp.status == 201) {
           swal.fire({
-            title: t('Installation Successful!', {ns: 'instrument_manager'}),
+            title: t('Installation Successful!', {ns: 'loris'}),
             type: 'success',
           }).then(function() {
             window.location.assign(loris.BaseURL + '/instrument_manager/');
@@ -63,7 +63,7 @@ class InstrumentUploadForm extends Component {
       .then((data) => {
         if (data.message) {
           swal.fire({
-            title: t('Upload Successful!', {ns: 'instrument_manager'}),
+            title: t('Upload Successful!', {ns: 'loris'}),
             type: 'success',
             text: data.message,
           }).then(function() {
@@ -72,7 +72,7 @@ class InstrumentUploadForm extends Component {
         }
         if (data.error) {
           swal.fire({
-            title: t('An error occurred', {ns: 'instrument_manager'}),
+            title: t('An error occurred', {ns: 'loris'}),
             type: 'error',
             text: data.error,
           });

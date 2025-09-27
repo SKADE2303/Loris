@@ -186,7 +186,7 @@ class InstrumentManagerIndex extends Component {
     ];
 
     const tabs = [
-      {id: 'browse', label: t('Browse', {ns: 'instrument_manager'})},
+      {id: 'browse', label: t('Browse', {ns: 'loris'})},
     ];
 
     let permsModal = null;
@@ -210,8 +210,8 @@ class InstrumentManagerIndex extends Component {
               this.fetchData();
             }).catch((message) => {
               swal.fire({
-                title: t('Oops..', {ns: 'instrument_manager'}),
-                text: t('Something went wrong!', {ns: 'instrument_manager'}),
+                title: t('Oops..', {ns: 'loris'}),
+                text: t('Something went wrong!', {ns: 'loris'}),
                 type: 'error',
               });
               reject();
@@ -260,7 +260,7 @@ class InstrumentManagerIndex extends Component {
       </Modal>);
     }
     if (this.props.hasPermission('instrument_manager_write')) {
-      tabs.push({id: 'upload', label: t('Upload', {ns: 'instrument_manager'})});
+      tabs.push({id: 'upload', label: t('Upload', {ns: 'loris'})});
     }
 
     const feedback = () => {

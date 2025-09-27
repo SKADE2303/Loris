@@ -17,8 +17,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-msgid "Instrument Manager"
-msgstr "इंस्ट्रूमेंट प्रबंधक"
 
 msgid "Instrument Manager"
 msgstr "इंस्ट्रूमेंट प्रबंधक"
@@ -74,15 +72,6 @@ msgstr "तालिका मान्य"
 msgid "Pages Valid"
 msgstr "पेज मान्य"
 
-msgid "Browse"
-msgstr "ब्राउज़ करें"
-
-msgid "Oops.."
-msgstr "उफ़.."
-
-msgid "Something went wrong!"
-msgstr "कुछ गड़बड़ हो गई!"
-
 msgid "Edit Permissions for"
 msgstr "इसके लिए अनुमतियाँ संपादित करें"
 
@@ -101,9 +90,6 @@ msgstr "<em>किसी भी</em> चयनित अनुमति वा�
 msgid "If no permissions are selected, the default LORIS permissions will be enforced for this instrument."
 msgstr "यदि कोई अनुमति नहीं चुनी जाती है, तो इस इंस्ट्रूमेंट के लिए डिफ़ॉल्ट LORIS अनुमतियाँ लागू होंगी।"
 
-msgid "Upload"
-msgstr "अपलोड करें"
-
 msgid "Instrument installation is not possible given the current server configuration; the LORIS 'adminUser' is not configured properly. File upload is still possible but instruments will need to be installed manually"
 msgstr "वर्तमान सर्वर कॉन्फ़िगरेशन के अनुसार इंस्ट्रूमेंट स्थापना संभव नहीं है; LORIS 'adminUser' ठीक से कॉन्फ़िगर नहीं है। फ़ाइल अपलोड अभी भी संभव है लेकिन इंस्ट्रूमेंट को मैन्युअल रूप से स्थापित करना होगा।"
 
@@ -115,18 +101,6 @@ msgstr "इंस्ट्रूमेंट अपलोड करें"
 
 msgid "Instrument file"
 msgstr "इंस्ट्रूमेंट फ़ाइल"
-
-msgid "Install"
-msgstr "इंस्टॉल करें"
-
-msgid "Installation Successful!"
-msgstr "स्थापना सफल रही!"
-
-msgid "Upload Successful!"
-msgstr "अपलोड सफल रहा!"
-
-msgid "An error occurred"
-msgstr "एक त्रुटि हुई"
 
 msgid "This instrument already exists in the test battery."
 msgstr "यह इंस्ट्रूमेंट पहले से ही टेस्ट बैटरी में मौजूद है।"
