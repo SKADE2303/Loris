@@ -186,6 +186,14 @@ msgstr "रद्द करें"
 
 msgid "Success!"
 msgstr "सफलता!"
+msgid "Browse"
+msgstr "ब्राउज़ करें"
+
+msgid "Upload"
+msgstr "अपलोड करें"
+
+msgid "Clear Filters"
+msgstr "फ़िल्टर हटाएँ"
 
 # Common candidate terms
 msgid "PSCID"
@@ -193,6 +201,9 @@ msgstr "पीएससीआईडी"
 
 msgid "DCCID"
 msgstr "डीसीसीआईडी"
+
+msgid "CandID"
+msgstr "उम्मीदवार आईडी"
 
 msgid "Visit Label"
 msgstr "दौरे का लेबल"
@@ -471,3 +482,9 @@ msgstr "वापसी"
 
 msgid "In Progress"
 msgstr "प्रगति पर"
+msgid "Download Table as CSV"
+msgstr "तालिका को CSV के रूप में डाउनलोड करें"
+
+# Common strings on widgets
+msgid "NEW"
+msgstr "नया"
