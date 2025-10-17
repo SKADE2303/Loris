@@ -151,7 +151,7 @@ class DataConflicts extends Component {
    * @return {JSX} the data conflicts form to render.
    */
   render() {
-    const { t } = this.props; 
+    const {t} = this.props; 
     // Waiting for async data to load.
     if (!this.state.isLoaded) {
       return <Loader/>;
