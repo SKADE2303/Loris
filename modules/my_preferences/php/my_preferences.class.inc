@@ -14,14 +14,8 @@ class My_Preferences extends \NDB_Form
     private const PASSWORD_ERROR_IS_USER   = 
                     'Your password cannot be your user name.';
     private const PASSWORD_ERROR_NO_MATCH  = 'The passwords do not match.';
-<<<<<<< HEAD
     private const PASSWORD_ERROR_NO_CHANGE = 'New and old passwords are ' .
                                         'identical: please choose another one';
-=======
-    private const PASSWORD_ERROR_NO_CHANGE = 
-                    'New and old passwords are identical: please choose another one';
-
->>>>>>> 5d670ed57 (lint)
     /**
      * Computes the initial values this page will be filled with.
      *
