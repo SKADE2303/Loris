@@ -162,6 +162,23 @@ msgstr "उन्नत फ़िल्टर दिखाएँ"
 
 msgid "Hide Advanced Filters"
 msgstr "उन्नत फ़िल्टर छिपाएँ"
+msgid "Pass"
+msgstr "पास"
+
+msgid "Fail"
+msgstr "फेल"
+
+msgid "True"
+msgstr "सत्य"
+
+msgid "False"
+msgstr "असत्य"
+
+msgid "Selected"
+msgstr "चयनित"
+
+msgid "selected"
+msgstr "चयनित"
 
 # Common swal labels
 msgid "Cancel"
@@ -228,6 +245,12 @@ msgstr "प्रतिक्रिया"
 msgid "Scans"
 msgstr "स्कैन"
 
+msgid "Stage"
+msgstr "चरण"
+
+msgid "Sent To DCC"
+msgstr "DCC को भेजा गया"
+
 msgid "Date of Birth"
 msgstr "जन्म तिथि"
 
@@ -286,6 +309,7 @@ msgstr "ईमेल करने के लिए डेटा पर्यव�
 
 msgid "Invalid email address"
 msgstr "अमान्य ईमेल पता"
+
 # Dashboard panel strings
 msgid "Views"
 msgstr "दृश्य"
@@ -363,6 +387,12 @@ msgstr "त्रुटि!"
 # Common timepoint and visit terms
 msgid "Not Started"
 msgstr "शुरू नहीं हुआ"
+msgid "Total"
+msgstr "कुल"
+
+# Common timepoint and visit terms
+msgid "Not Started"
+msgstr "प्रारंभ नहीं हुआ"
 
 msgid "Screening"
 msgstr "जांच"
@@ -431,3 +461,7 @@ msgstr "{{years}} वर्ष का"
 # Other generic terms
 msgid "Loading..."
 msgstr "लोड हो रहा है..."
+msgstr "वापसी"
+
+msgid "In Progress"
+msgstr "प्रगति पर"

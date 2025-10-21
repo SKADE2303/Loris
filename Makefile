@@ -139,6 +139,11 @@ module_manager:
 mri_violations:
 	target=mri_violations npm run compile
 
+imaging_browser:
+	msgfmt -o modules/imaging_browser/locale/hi/LC_MESSAGES/imaging_browser.mo modules/imaging_browser/locale/hi/LC_MESSAGES/imaging_browser.po
+	npx i18next-conv -l hi -s modules/imaging_browser/locale/hi/LC_MESSAGES/imaging_browser.po -t modules/imaging_browser/locale/hi/LC_MESSAGES/imaging_browser.json
+	target=imaging_browser npm run compile
+
 issue_tracker:
 	msgfmt -o modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.mo modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.po
 	npx i18next-conv -l hi -s modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.po -t modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.json
