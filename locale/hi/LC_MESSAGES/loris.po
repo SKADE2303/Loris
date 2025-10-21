@@ -123,6 +123,9 @@ msgstr "हाँ"
 msgid "No"
 msgstr "नहीं"
 
+msgid "Close"
+msgstr "बंद करें"
+
 # Common candidate terms
 msgid "PSCID"
 msgstr "पीएससीआईडी"
