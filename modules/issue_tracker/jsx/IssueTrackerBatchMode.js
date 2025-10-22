@@ -14,7 +14,7 @@ import {withTranslation} from 'react-i18next';
  * @param {object} props - The component props
  * @param {object} props.options - The options for the IssueTrackerBatchMode
  */
-function IssueTrackerBatchMode(props) {
+function IssueTrackerBatchMode({options = {}, t}) {
   const [issues, setIssues] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedPriorities, setSelectedPriorities] = useState([]);
@@ -25,7 +25,6 @@ function IssueTrackerBatchMode(props) {
   const [error, setError] = useState(null);
   const [assignees, setAssignees] = useState({});
   const [otherWatchers, setOtherWatchers] = useState({});
-  const {t} = this.props;
 
   // Pagination state
   const [page, setPage] = useState({
