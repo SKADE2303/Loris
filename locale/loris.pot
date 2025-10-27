@@ -196,6 +196,8 @@ msgid "Next"
 msgstr ""
 
 msgid "Save"
+msgstr ""
+
 msgid "Active"
 msgstr ""
 
