@@ -110,7 +110,7 @@ class UserAccountsIndex extends Component {
         );
       }
       break;
-    case t('Username', {ns: 'user_accounts'}):
+    case t('Username', {ns: 'loris'}):
       url = loris.BaseURL + '/user_accounts/edit_user/' + row.Username;
       result = <td><a href={url}>{cell}</a></td>;
       break;
@@ -186,7 +186,7 @@ class UserAccountsIndex extends Component {
         },
       },
       {
-        label: t('Username', {ns: 'user_accounts'}),
+        label: t('Username', {ns: 'loris'}),
         show: true,
         filter: {
           name: 'username',
