@@ -743,12 +743,8 @@ class Edit_User extends \NDB_Form
         //   - once leading and trailing spaces are stripped, the field should
         //       not exceed 120 chars
         $onInvalidMsg
-            = "this.setCustomValidity('"
-            . dgettext(
-                "user_accounts",
-                "First name is required and should not exceed 120 characters"
-            )
-            . "')";
+            = "this.setCustomValidity('First name is required and "
+            . "should not exceed 120 characters')";
         $this->addBasicText(
             'First_name',
             dgettext("loris", "First name"),
@@ -765,12 +761,8 @@ class Edit_User extends \NDB_Form
         //   - once leading and trailing spaces are stripped, the field should
         //       not exceed 120 chars
         $onInvalidMsg
-            = "this.setCustomValidity('"
-            . dgettext(
-                "user_accounts",
-                "Last name is required and should not exceed 120 characters"
-            )
-            . "')";
+            = "this.setCustomValidity('Last name is required and "
+            . "should not exceed 120 characters')";
         $this->addBasicText(
             'Last_name',
             dgettext("loris", "Last name"),
@@ -1453,11 +1445,8 @@ class Edit_User extends \NDB_Form
             // Although some of these characters are legal in emails, due to the
             // current HTML escaping method, it is better to reject email
             // addresses containing them
-            return dgettext(
-                'loris',
-                'Email address cannot contain any of the following characters: '
-                . '<, >, &, and "'
-            );
+            return 'Email address can not contain any the following ' .
+            'characters: <, >, & and "';
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // If email not syntactically valid
             return dgettext('loris', 'Invalid email address');

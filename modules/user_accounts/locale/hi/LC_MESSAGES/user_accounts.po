@@ -176,3 +176,9 @@ msgstr "कृपया कम से कम एक परीक्षक स्
 
 msgid "Please notice that the \"Active from\" date should be lesser or equal to the \"Active to\" date."
 msgstr "कृपया ध्यान दें कि 'सक्रिय शुरू' तिथि, 'सक्रिय समाप्त' तिथि के बराबर या उससे पहले होनी चाहिए।"
+
+msgid "First name is required and should not exceed 120 characters"
+msgstr "पहला नाम आवश्यक है और 120 अक्षरों से अधिक नहीं होना चाहिए।"
+
+msgid "Last name is required and should not exceed 120 characters"
+msgstr "अंतिम नाम आवश्यक है और 120 अक्षरों से अधिक नहीं होना चाहिए।"

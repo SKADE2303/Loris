@@ -115,20 +115,23 @@ class UserAccountsIndex extends Component {
       result = <td><a href={url}>{cell}</a></td>;
       break;
     case t('Active', {ns: 'loris'}):
-      if (row.Active === 'Y') {
+      const activeKey = t('Active', {ns: 'loris'});
+      if (row[activeKey] === 'Y') {
         result = <td>{t('Yes', {ns: 'loris'})}</td>;
-      } else if (row.Active === 'N') {
+      } else if (row[activeKey] === 'N') {
         result = <td>{t('No', {ns: 'loris'})}</td>;
       }
       break;
     case t('Pending Approval', {ns: 'user_accounts'}):
-      if (row['Pending Approval'] === 'Y') {
+      const pendingKey = t('Pending Approval', {ns: 'user_accounts'});
+      if (row[pendingKey] === 'Y') {
         result = <td>{t('Yes', {ns: 'loris'})}</td>;
-      } else if (row['Pending Approval'] === 'N') {
+      } else if (row[pendingKey] === 'N') {
         result = <td>{t('No', {ns: 'loris'})}</td>;
       }
       break;
     }
+    console.log('Fetched data:', this.state.data);
     return result;
   }
 
@@ -280,3 +283,4 @@ window.addEventListener('load', () => {
 });
 
 export default withTranslation(['user_accounts', 'loris'])(UserAccountsIndex);
+

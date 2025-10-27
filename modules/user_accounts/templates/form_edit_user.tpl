@@ -453,7 +453,7 @@
             {$form.account_request_date.label}
         </label>
         <div class="col-sm-10">
-            {$form.account_request_date.html|dgettext('loris', 'None')}
+            {$form.account_request_date.html|default:dgettext('loris', 'None')}
         </div>
     </div>
 

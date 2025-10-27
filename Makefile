@@ -165,3 +165,8 @@ server_processes_manager:
 
 conflict_resolver:
 	target=conflict_resolver npm run compile
+
+user_accounts:
+	msgfmt -o modules/user_accounts/locale/hi/LC_MESSAGES/user_accounts.mo modules/user_accounts/locale/hi/LC_MESSAGES/user_accounts.po
+	npx i18next-conv -l hi -s modules/user_accounts/locale/hi/LC_MESSAGES/user_accounts.po -t modules/user_accounts/locale/hi/LC_MESSAGES/user_accounts.json
+	target=user_accounts npm run compile
