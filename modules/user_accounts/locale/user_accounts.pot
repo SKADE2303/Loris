@@ -24,8 +24,6 @@ msgstr ""
 msgid "Edit User"
 msgstr ""
 
-# --- Strings not in loris.pot, add below ---
-
 msgid "This user has no site affiliations"
 msgstr ""
 
