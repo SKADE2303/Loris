@@ -116,6 +116,49 @@ msgstr ""
 msgid "No"
 msgstr ""
 
+msgid "Clear Filters"
+msgstr ""
+
+msgid "Browse"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Saving"
+msgstr ""
+
+msgid "Are You Sure?"
+msgstr ""
+
+msgid "Leaving the form will result in the loss of any information entered."
+msgstr ""
+
+msgid "Saving"
+msgstr ""
+
+msgid "Are You Sure?"
+msgstr ""
+
+msgid "Leaving the form will result in the loss of any information entered."
+msgstr ""
+
+msgid "Saving"
+msgstr ""
+
+msgid "Are You Sure?"
+msgstr ""
+
+msgid "Leaving the form will result in the loss of any information entered."
+msgstr ""
+
+msgid "Saving"
+msgstr ""
+
+msgid "Are You Sure?"
+msgstr ""
+
+msgid "Leaving the form will result in the loss of any information entered."
 msgid "N/A"
 msgstr ""
 
@@ -144,7 +187,13 @@ msgstr ""
 msgid "DCCID"
 msgstr ""
 
+msgid "CandID"
+msgstr ""
+
 msgid "Visit Label"
+msgstr ""
+
+msgid "Email"
 msgstr ""
 
 msgid "Site"
@@ -221,6 +270,21 @@ msgid "Save"
 msgstr ""
 
 msgid "Active"
+msgstr ""
+
+msgid "Date of Birth"
+msgstr ""
+
+msgid "An error occured while loading the page."
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Category"
 msgstr ""
 
 # Data table strings
