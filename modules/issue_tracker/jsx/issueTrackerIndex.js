@@ -333,7 +333,7 @@ class IssueTrackerIndex extends Component {
             name="issuesTracker"
             data={this.state.data.data}
             fields={fields}
-            filterPresets={filterPresets}
+            filterPresets={Object.values(filterPresets)}
             actions={actions}
             getFormattedCell={this.formatColumn}
           />

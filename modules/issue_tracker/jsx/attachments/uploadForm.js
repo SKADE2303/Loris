@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {withTranslation} from 'react-i18next';
 
 import ProgressBar from 'ProgressBar';
 import swal from 'sweetalert2';
@@ -127,6 +128,7 @@ class IssueUploadAttachmentForm extends Component {
    * @return {JSX} - React markup for the component
    */
   render() {
+    const {t} = this.props;
     return (
       <div className='row'>
         <div className='col-md-8 col-lg-7'>
@@ -137,14 +139,14 @@ class IssueUploadAttachmentForm extends Component {
           >
             <FileElement
               name='file'
-              label='File to upload'
+              label={t('File to upload', {ns: 'issue_tracker'})}
               value={this.state.formData.file}
               onUserInput={this.setFileUploadFormData}
               required={true}
             />
             <TextareaElement
               name='fileDescription'
-              label='Description'
+              label={t('Description', {ns: 'issue_tracker'})}
               value={this.state.formData.fileDescription}
               onUserInput={this.setFileUploadFormData}
               required={false}
@@ -154,7 +156,7 @@ class IssueUploadAttachmentForm extends Component {
                 <ProgressBar value={this.state.uploadProgress}/>
               </div>
             </div>
-            <ButtonElement label='Submit Attachment'/>
+            <ButtonElement label={t('Submit Attachment', {ns: 'issue_tracker'})}/>
           </FormElement>
         </div>
       </div>
@@ -165,6 +167,7 @@ class IssueUploadAttachmentForm extends Component {
 IssueUploadAttachmentForm.propTypes = {
   issue: PropTypes.string.isRequired,
   baseURL: PropTypes.string.isRequired,
+  t: PropTypes.func,
 };
 
-export default IssueUploadAttachmentForm;
+export default withTranslation('issue_tracker')(IssueUploadAttachmentForm);

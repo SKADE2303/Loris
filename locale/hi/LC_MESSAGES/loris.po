@@ -140,11 +140,9 @@ msgstr "हाँ"
 
 msgid "N"
 msgstr "नहीं"
+
 msgid "Create"
 msgstr "बनाएँ"
-
-msgid "N/A"
-msgstr "लागू नहीं"
 
 # Filters
 msgid "Selection Filter"
@@ -245,12 +243,6 @@ msgstr "इकाई प्रकार"
 msgid "Scan Done"
 msgstr "स्कैन पूरा हुआ"
 
-msgid "Show Advanced Filters"
-msgstr "उन्नत फ़िल्टर दिखाएँ"
-
-msgid "Hide Advanced Filters"
-msgstr "उन्नत फ़िल्टर छुपाएँ"
-
 msgid "Language"
 msgstr "भाषा"
 
@@ -265,9 +257,6 @@ msgstr "सहेजें"
 
 msgid "Active"
 msgstr "सक्रिय"
-
-msgid "Language"
-msgstr "भाषा"
 
 msgid "Ethnicity"
 msgstr "जातीयता"
@@ -407,9 +396,6 @@ msgstr "पूर्ण"
 
 msgid "Instruments"
 msgstr "उपकरण"
-
-msgid "None"
-msgstr "कोई नहीं"
 
 msgid "Partial"
 msgstr "आंशिक"

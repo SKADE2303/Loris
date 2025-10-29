@@ -32,10 +32,10 @@ function IssueTrackerBatchMode({options = {}, t}) {
     rows: 10,
   });
 
-  const priorities = props.options.priorities || {};
-  const statuses = props.options.statuses || {};
-  const categories = props.options.categories || {};
-  const sites = props.options.sites || {};
+  const priorities = options.priorities || {};
+  const statuses = options.statuses || {};
+  const categories = options.categories || {};
+  const sites = options.sites || {};
 
   useEffect(() => {
     fetchIssues();

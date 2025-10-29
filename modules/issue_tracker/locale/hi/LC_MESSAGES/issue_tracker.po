@@ -143,3 +143,39 @@ msgstr "समस्या अपडेट की गई!"
 
 msgid "Issue created!"
 msgstr "समस्या बनाई गई!"
+
+msgid "File to upload"
+msgstr "अपलोड करने के लिए फ़ाइल"
+
+msgid "Submit Attachment"
+msgstr "संलग्नक भेजें"
+
+msgid "Upload Successful!"
+msgstr "अपलोड सफल!"
+
+msgid "Permission denied"
+msgstr "अनुमति अस्वीकृत"
+
+msgid "Upload error!"
+msgstr "अपलोड त्रुटि!"
+
+msgid "Confirmation"
+msgstr "पुष्टि"
+
+msgid "Please confirm the request to delete the \"{file}\" attachment."
+msgstr "कृपया \"{file}\" संलग्नक को हटाने का अनुरोध पुष्टि करें।"
+
+msgid "Delete attachment"
+msgstr "संलग्नक हटाएँ"
+
+msgid "Date of attachment: "
+msgstr "संलग्नक की तिथि: "
+
+msgid "File: "
+msgstr "फ़ाइल: "
+
+msgid "User: "
+msgstr "उपयोगकर्ता: "
+
+msgid "Attachment History"
+msgstr "संलग्नक इतिहास"

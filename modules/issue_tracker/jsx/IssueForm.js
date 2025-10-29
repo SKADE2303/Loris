@@ -460,7 +460,10 @@ class IssueForm extends Component {
         if (myFormData['centerID'] == 'all') {
           myFormData['centerID'] = null;
         }
-        formData.append(key, myFormData[key]);
+        let valueToSend = Array.isArray(myFormData[key])
+        ? myFormData[key].join(',')
+        : myFormData[key];
+        formData.append(key, valueToSend);
       }
     }
 

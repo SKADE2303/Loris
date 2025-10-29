@@ -143,3 +143,39 @@ msgstr ""
 
 msgid "Issue created!"
 msgstr ""
+
+msgid "File to upload"
+msgstr ""
+
+msgid "Submit Attachment"
+msgstr ""
+
+msgid "Upload Successful!"
+msgstr ""
+
+msgid "Permission denied"
+msgstr ""
+
+msgid "Upload error!"
+msgstr ""
+
+msgid "Confirmation"
+msgstr ""
+
+msgid "Please confirm the request to delete the \"{file}\" attachment."
+msgstr ""
+
+msgid "Delete attachment"
+msgstr ""
+
+msgid "Date of attachment: "
+msgstr ""
+
+msgid "File: "
+msgstr ""
+
+msgid "User: "
+msgstr ""
+
+msgid "Attachment History"
+msgstr ""
