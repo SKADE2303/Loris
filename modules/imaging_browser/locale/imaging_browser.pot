@@ -60,6 +60,12 @@ msgstr ""
 msgid "QC Status"
 msgstr ""
 
+msgid "Caveat"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
 msgid "all types"
 msgstr ""
 
