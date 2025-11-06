@@ -132,3 +132,5 @@ msgstr ""
 msgid "Detailed"
 msgstr ""
 
+msgid "<select a row in the table below to view the upload logs>"
+msgstr ""

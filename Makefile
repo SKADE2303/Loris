@@ -148,6 +148,11 @@ imaging_browser:
 	npx i18next-conv -l hi -s modules/imaging_browser/locale/hi/LC_MESSAGES/imaging_browser.po -t modules/imaging_browser/locale/hi/LC_MESSAGES/imaging_browser.json
 	target=imaging_browser npm run compile
 
+imaging_uploader:
+	msgfmt -o modules/imaging_uploader/locale/hi/LC_MESSAGES/imaging_uploader.mo modules/imaging_uploader/locale/hi/LC_MESSAGES/imaging_uploader.po
+	npx i18next-conv -l hi -s modules/imaging_uploader/locale/hi/LC_MESSAGES/imaging_uploader.po -t modules/imaging_uploader/locale/hi/LC_MESSAGES/imaging_uploader.json
+	target=imaging_uploader npm run compile
+
 issue_tracker:
 	msgfmt -o modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.mo modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.po
 	npx i18next-conv -l hi -s modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.po -t modules/issue_tracker/locale/hi/LC_MESSAGES/issue_tracker.json

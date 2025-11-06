@@ -25,9 +25,10 @@ class LogPanel extends Component {
    */
   constructor(props) {
     super(props);
-
+    const {t} = this.props;
     this.state = {
-      logText: '<select a row in the table below to view the upload logs>',
+      logText: t('<select a row in the table below to view the upload logs>',
+         {ns: 'imaging_uploader'}),
       logType: 'summary',
     };
 
@@ -68,8 +69,8 @@ class LogPanel extends Component {
             uploadProgress.setUploadRow(null);
             uploadProgress.setProgressFromServer(null);
             this.setState({
-              logText: '<select a row in the table below '
-                       + 'to view the upload logs>',
+              logText: t('<select a row in the table below to view the upload logs>',
+              {ns: 'imaging_uploader'}),
             });
             return;
           }
